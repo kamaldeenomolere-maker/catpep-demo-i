@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#070807">
+<meta name="description" content="An independent black-and-gold website concept for Catpep Peppersoup & More.">
+<title>Catpep Peppersoup & More — Website Concept</title>
+<style>
+:root{color-scheme:dark;--bg:#070807;--panel:#10120f;--panel2:#151711;--gold:#f5ad24;--gold2:#ffd27b;--ink:#f7f4ed;--muted:#b5b4ac;--line:#303128;--green:#27c768}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid var(--gold2);outline-offset:3px}.shell{width:min(1160px,calc(100% - 40px));margin-inline:auto}
+.demo-banner{background:#17150f;border-bottom:1px solid #59451e;color:#f3d9a2;text-align:center;padding:9px 16px;font-size:12px;letter-spacing:.1px}.demo-banner strong{color:var(--gold2)}
+header{position:sticky;top:0;z-index:20;background:#080908f2;border-bottom:1px solid #282a23;backdrop-filter:blur(14px)}.header-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:22px}.logo{display:flex;align-items:center;gap:9px;flex-shrink:0}.logo-icon{font-size:25px}.logo strong{display:block;color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:28px;line-height:1}.logo small{display:block;color:#e8e2d5;font-size:8px;font-weight:800;letter-spacing:1.6px;margin-top:5px}.nav-wrap{display:flex;align-items:center;gap:18px}nav{display:flex;align-items:center;gap:4px}nav a{font-size:13px;font-weight:700;color:#e6e2d9;padding:12px 10px;border-radius:8px}nav a:hover{color:var(--gold);background:#f5ad2410}.header-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 17px;border-radius:999px;border:1px solid var(--gold);font-weight:800;font-size:13px;transition:transform .18s,background .18s}.header-cta,.btn-gold{background:var(--gold);color:#15120a}.btn-outline{background:transparent;color:var(--ink)}.btn:hover,.header-cta:hover{transform:translateY(-2px)}.menu-toggle{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:12px;background:#11130f;color:var(--gold);font-size:22px}
+.hero{position:relative;overflow:hidden;padding:90px 0 84px;background:radial-gradient(ellipse at 80% 35%,#5c4118 0,#1d1a11 24%,transparent 52%),linear-gradient(115deg,#070807 20%,#10110e 100%)}.hero:after{content:"";position:absolute;inset:auto -10% -100px 40%;height:220px;background:#000;filter:blur(70px);pointer-events:none}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:55px;position:relative;z-index:1}.eyebrow,.section-kicker{font-size:11px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #8c651e;border-radius:99px;padding:8px 13px;background:#0a0b08a8}.hero h1{font-size:clamp(44px,6vw,76px);line-height:.98;letter-spacing:-3.5px;margin:22px 0 20px}.gold{color:var(--gold)}.hero-copy{max-width:540px;color:#d1cfc6;font-size:17px}.hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:26px}.hero-points{display:flex;gap:20px;flex-wrap:wrap;margin-top:30px;color:#c8c5bb;font-size:12px}.hero-points span:before{content:"✦";color:var(--gold);margin-right:7px}.hero-photo{position:relative;min-width:0}.hero-photo img{width:100%;height:440px;object-fit:cover;display:block;border-radius:28px;border:1px solid #65502c;box-shadow:0 25px 70px #0009}.photo-label{position:absolute;left:18px;bottom:18px;background:#080908e8;border:1px solid #5b4928;border-radius:13px;padding:11px 14px;font-size:12px;color:#e9dfca}.photo-label strong{display:block;color:var(--gold);font-size:14px}.img-fallback{display:none;min-height:260px;width:100%;border-radius:18px;background:linear-gradient(145deg,#1c1d17,#332817);border:1px solid #514328;align-items:center;justify-content:center;text-align:center;padding:25px;color:#d9c9a8}.hero-photo .img-fallback{height:440px;border-radius:28px}.img-fallback .fallback-icon{display:block;font-size:44px;margin-bottom:8px}.image-wrap.image-failed img{display:none}.image-wrap.image-failed .img-fallback{display:flex}
+section{scroll-margin-top:100px}.section{padding:82px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:28px}.section-head h2,.about h2,.location h2,.contact h2{font-size:clamp(30px,4vw,46px);line-height:1.06;letter-spacing:-1.6px;margin:8px 0 0}.section-head p{margin:8px 0 0;color:var(--muted);max-width:560px}.illustrative-note{border:1px solid #55431f;border-radius:10px;background:#15130e;color:#e4d3ad;padding:10px 13px;font-size:11px;max-width:300px}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.card{min-width:0;border:1px solid var(--line);border-radius:17px;overflow:hidden;background:var(--panel);transition:transform .2s,border-color .2s}.card:hover{transform:translateY(-4px);border-color:#87631f}.food-image{height:205px;overflow:hidden;background:#211d13}.food-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}.card:hover .food-image img{transform:scale(1.04)}.food-image .img-fallback{height:100%;min-height:0;border:0;border-radius:0}.card-body{padding:18px}.item-num{color:var(--gold);font-size:11px;font-weight:900;letter-spacing:1px}.card h3{font-size:17px;line-height:1.25;margin:7px 0 8px}.card p{color:var(--muted);font-size:13px;margin:0 0 16px}.card .btn{width:100%;padding:10px 12px;font-size:12px}
+.about{background:#0d0f0d;border-block:1px solid #24261f}.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}.about p{color:var(--muted);max-width:650px}.concept-card{border:1px solid #4d3b1c;background:radial-gradient(circle at 70% 20%,#f5ad2417,transparent 42%),#12130f;border-radius:22px;padding:28px}.concept-card .symbol{font-size:32px}.concept-card h3{font:italic 700 28px/1.2 Georgia,serif;color:var(--gold2);margin:12px 0}.concept-card p{font-size:13px;margin:0}
+.location-card{display:grid;grid-template-columns:.9fr 1.1fr;overflow:hidden;border:1px solid var(--line);border-radius:22px;background:var(--panel)}.location-copy{padding:36px;align-self:center}.location-copy p{color:var(--muted)}.location-copy .btn{margin-top:10px}.map-visual{min-height:340px;position:relative;background-color:#d9d8ce;background-image:linear-gradient(26deg,transparent 45%,#fff 46% 49%,transparent 50%),linear-gradient(118deg,transparent 41%,#fff 42% 45%,transparent 46%),linear-gradient(82deg,transparent 69%,#fff 70% 73%,transparent 74%),linear-gradient(155deg,transparent 24%,#b9c7b2 25% 32%,transparent 33%);background-size:180px 140px,220px 170px,180px 190px,100% 100%}.map-pin{position:absolute;left:53%;top:40%;font-size:36px;filter:drop-shadow(0 3px 3px #0005)}.map-label{position:absolute;left:59%;top:35%;padding:9px 11px;background:#fff;color:#292d27;border-radius:9px;font-size:12px;font-weight:800;box-shadow:0 3px 15px #0002}.map-label small{display:block;color:#686c64;font-weight:500}.contact{background:var(--gold);color:#15120a;padding:65px 0}.contact-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}.contact .section-kicker{color:#59400f}.contact p{max-width:650px;color:#49380f}.contact-actions{display:flex;flex-wrap:wrap;gap:9px}.contact .btn-gold{background:#10120f;color:white;border-color:#10120f}.contact .btn-outline{color:#17140d;border-color:#17140d}footer{padding:27px 0 95px;border-top:1px solid #25271f}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footer-note{font-size:11px;color:#a6a49b;max-width:440px}.footer-links{display:flex;gap:15px;color:var(--gold);font-size:12px;font-weight:700}.mobile-bar{display:none}.status-message{margin-top:14px;padding:12px 14px;border-radius:10px;background:#1a1811;border:1px solid #675020;color:#f5dfb2;font-size:13px}.status-message[hidden]{display:none}
+@media(max-width:960px){.hero-grid{gap:28px}.hero-photo img,.hero-photo .img-fallback{height:370px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.food-image{height:220px}.nav-wrap{gap:8px}nav a{padding:10px 7px;font-size:12px}.header-cta{padding:11px 12px;font-size:12px}}
+@media(max-width:720px){.shell{width:min(100% - 30px,560px)}.header-inner{min-height:70px;gap:10px}.logo strong{font-size:25px}.logo-icon{font-size:22px}.nav-wrap{display:none;position:absolute;left:15px;right:15px;top:calc(100% + 7px);padding:10px;background:#0b0c0b;border:1px solid var(--line);border-radius:15px;box-shadow:0 18px 35px #0009;align-items:stretch}.nav-wrap.open{display:flex;flex-direction:column}.nav-wrap nav{display:flex;flex-direction:column;align-items:stretch;gap:2px}.nav-wrap nav a{padding:13px;font-size:14px}.header-cta{width:100%;padding:13px}.menu-toggle{display:block;flex-shrink:0}.hero{padding:58px 0 55px}.hero-grid{grid-template-columns:1fr;gap:30px}.hero h1{font-size:clamp(45px,12vw,66px);letter-spacing:-2.4px}.hero-copy{font-size:15px}.hero-photo img,.hero-photo .img-fallback{height:300px}.hero-points{gap:10px 16px}.section{padding:62px 0}.section-head{display:block}.illustrative-note{margin-top:18px;max-width:none}.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.food-image{height:155px}.card-body{padding:13px}.card h3{font-size:15px}.card p{font-size:12px}.card .btn{font-size:11px}.about-grid{grid-template-columns:1fr;gap:25px}.location-card{grid-template-columns:1fr}.location-copy{padding:27px}.map-visual{min-height:250px}.contact-inner{display:block}.contact-actions{margin-top:22px}.contact-actions .btn{flex:1 1 145px}.footer-inner{align-items:flex-start}.footer-note{order:3;flex-basis:100%}.mobile-bar{position:fixed;z-index:30;left:10px;right:10px;bottom:10px;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px;border:1px solid #34352d;border-radius:16px;background:#090a09f2;box-shadow:0 10px 35px #0009;backdrop-filter:blur(15px)}.mobile-bar .btn{border-radius:10px;padding:12px 7px;font-size:12px}body{padding-bottom:88px}footer{padding-bottom:25px}}
+@media(max-width:380px){.logo strong{font-size:22px}.logo small{font-size:7px;letter-spacing:1px}.cards{grid-template-columns:1fr}.food-image{height:205px}.hero-actions .btn{width:100%}.mobile-bar .btn{font-size:11px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="demo-banner"><strong>Independent website concept</strong> — created for demonstration purposes. Not the official Catpep website.</div>
+<header>
+ <div class="shell header-inner">
+  <a class="logo" href="#home" aria-label="Catpep concept home"><span class="logo-icon">🌶️</span><span><strong>Catpep</strong><small>PEPPERSOUP &amp; MORE</small></span></a>
+  <div class="nav-wrap" id="navWrap">
+   <nav id="mainNav" aria-label="Main navigation"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#location">Location</a><a href="#contact">Contact</a></nav>
+   <button class="header-cta" type="button" data-enquiry>💬 Enquiry options</button>
+  </div>
+  <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-controls="navWrap" aria-expanded="false">☰</button>
+ </div>
+</header>
+<main>
+<section id="home" class="hero"><div class="shell hero-grid">
+ <div><div class="eyebrow">✦ Nigerian pepper soup concept</div><h1>Catpep<br><span class="gold">Peppersoup</span><br>&amp; More</h1>
+ <p class="hero-copy">A premium black-and-gold concept for a Nigerian pepper soup menu. The food imagery and menu descriptions below are illustrative and have not been verified by the restaurant.</p>
+ <div class="hero-actions"><a class="btn btn-gold" href="#menu">🍲 Explore concept menu</a><a class="btn btn-outline" href="https://maps.app.goo.gl/WdWTeVsmWKffZ9n67" target="_blank" rel="noopener noreferrer">📍 Get directions</a></div>
+ <div class="hero-points"><span>Bold flavours</span><span>Nigerian comfort food</span><span>Mobile-friendly concept</span></div></div>
+ <div class="hero-photo image-wrap"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Assorted_meat_pepper_soup_at_Lagos_Island.jpg?width=1000" alt="Illustrative photograph of Nigerian assorted meat pepper soup" fetchpriority="high" decoding="async"><div class="img-fallback"><div><span class="fallback-icon">🍲</span>Food photograph unavailable<br><small>Illustrative pepper soup image</small></div></div><div class="photo-label"><strong>Illustrative food photography</strong>Not a verified photo of Catpep’s food</div></div>
+</div></section>
+<section id="menu" class="section"><div class="shell">
+ <div class="section-head"><div><div class="section-kicker">Concept menu</div><h2>Explore the <span class="gold">flavours.</span></h2><p>Sample menu categories for design demonstration only. Availability, ingredients, prices and descriptions must be confirmed with the restaurant.</p></div><div class="illustrative-note">DEMO CONTENT · Menu items and images are illustrative, not a confirmed live menu.</div></div>
+ <div class="cards">
+  <article class="card"><div class="food-image image-wrap"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Assorted_meat_pepper_soup_at_Lagos_Island.jpg?width=700" alt="Illustrative assorted meat pepper soup" loading="lazy" decoding="async"><div class="img-fallback"><div>🍲<br>Illustrative food image</div></div></div><div class="card-body"><span class="item-num">01 / SAMPLE ITEM</span><h3>Assorted Meat Pepper Soup</h3><p>Sample menu entry. Final ingredients and preparation are unverified.</p><button class="btn btn-outline" type="button" data-enquiry>Ask about this item →</button></div></article>
+  <article class="card"><div class="food-image image-wrap"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Spicy_Goat_meat_pepper_soup.jpg?width=700" alt="Illustrative Nigerian goat meat pepper soup" loading="lazy" decoding="async"><div class="img-fallback"><div>🍲<br>Illustrative food image</div></div></div><div class="card-body"><span class="item-num">02 / SAMPLE ITEM</span><h3>Goat Meat Pepper Soup</h3><p>Sample menu entry. Availability and serving details are unverified.</p><button class="btn btn-outline" type="button" data-enquiry>Ask about this item →</button></div></article>
+  <article class="card"><div class="food-image image-wrap"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Goat_meat_pepper_soup.jpg?width=700" alt="Illustrative meat pepper soup photograph" loading="lazy" decoding="async"><div class="img-fallback"><div>🍲<br>Illustrative food image</div></div></div><div class="card-body"><span class="item-num">03 / SAMPLE ITEM</span><h3>Beef Pepper Soup</h3><p>Illustrative listing; the image is not verified as beef pepper soup.</p><button class="btn btn-outline" type="button" data-enquiry>Ask about this item →</button></div></article>
+  <article class="card"><div class="food-image image-wrap"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Local_bush_meat_pepper_soup.jpg?width=700" alt="Illustrative Nigerian pepper soup photograph" loading="lazy" decoding="async"><div class="img-fallback"><div>🍲<br>Illustrative food image</div></div></div><div class="card-body"><span class="item-num">04 / SAMPLE ITEM</span><h3>Cow Skin Pepper Soup</h3><p>Illustrative listing; ingredients and the exact dish are unverified.</p><button class="btn btn-outline" type="button" data-enquiry>Ask about this item →</button></div></article>
+ </div>
+</div></section>
+<section id="about" class="about section"><div class="shell about-grid"><div><div class="section-kicker">About this page</div><h2>A bold look for a <span class="gold">food concept.</span></h2><p>This independent portfolio concept explores how a pepper soup business website could present its menu, location link and enquiry options. It is not an official restaurant website, and no restaurant endorsement or owner approval is implied.</p><p>Replace the sample menu, food photographs and any business details with information and images approved by the restaurant before public use.</p></div><aside class="concept-card"><span class="symbol">✦</span><h3>Premium. Warm. Nigerian.</h3><p>Black surfaces, gold accents, rounded food photography and clear mobile navigation—designed as a visual direction, not a claim about the restaurant’s actual service.</p></aside></div></section>
+<section id="location" class="section"><div class="shell"><div class="location-card"><div class="location-copy"><div class="section-kicker">Directions link</div><h2>Find the <span class="gold">location.</span></h2><p>The Google Maps directions link below is preserved from the existing concept. Please verify the pin and address with the restaurant before relying on or publishing this page as official.</p><a class="btn btn-gold" href="https://maps.app.goo.gl/WdWTeVsmWKffZ9n67" target="_blank" rel="noopener noreferrer">📍 Open Google Maps →</a></div><div class="map-visual" role="img" aria-label="Decorative map illustration; use the Google Maps link for directions"><span class="map-pin">📍</span><div class="map-label">Directions link<small>Decorative map illustration</small></div></div></div></div></section>
+<section id="contact" class="contact"><div class="shell contact-inner"><div><div class="section-kicker">Enquiry options</div><h2>Make it <span>ready for orders.</span></h2><p>Phone and WhatsApp ordering are not connected in this demo. Until approved contact details are added, the buttons explain this limitation instead of pretending to place an order.</p><div id="statusMessage" class="status-message" role="status" aria-live="polite" hidden></div></div><div class="contact-actions"><button class="btn btn-gold" type="button" data-whatsapp>💬 WhatsApp enquiry</button><button class="btn btn-outline" type="button" data-call>☎️ Call to enquire</button><a class="btn btn-outline" href="https://maps.app.goo.gl/WdWTeVsmWKffZ9n67" target="_blank" rel="noopener noreferrer">📍 Directions</a></div></div></section>
+</main>
+<footer><div class="shell footer-inner"><a class="logo" href="#home"><span class="logo-icon">🌶️</span><span><strong>Catpep</strong><small>WEBSITE CONCEPT</small></span></a><p class="footer-note">Independent website concept created for demonstration purposes. Not the official Catpep website. This page does not transmit enquiries; contact the website creator separately about the demo. It is not an official restaurant contact channel.</p><div class="footer-links"><a href="#menu">Sample menu</a><a href="#location">Directions</a><a href="#contact">Enquiry status</a></div></div></footer>
+<div class="mobile-bar" aria-label="Demo enquiry actions"><button class="btn btn-gold" type="button" data-whatsapp>💬 WhatsApp</button><button class="btn btn-outline" type="button" data-call>☎️ Call</button></div>
+<script>
+/* CONTACT SETTINGS — keep blank until the restaurant explicitly authorizes and supplies these details.
+   Nigerian number example format: 2348012345678 (country code, no +, spaces or leading 0).
+   PHONE_NUMBER may be set as digits with country code, e.g. +2348012345678.
+*/
+const WHATSAPP_NUMBER = "";
+const PHONE_NUMBER = "";
+const CREATOR_ENQUIRY_MESSAGE = "This is a portfolio demo. This page does not send messages to the restaurant or creator; contact the website creator separately about the demo. No order is placed or confirmed.";
+
+const statusBox = document.getElementById("statusMessage");
+function showStatus(message) {
+  statusBox.textContent = message;
+  statusBox.hidden = false;
+  statusBox.scrollIntoView({behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "nearest"});
+}
+function cleanWhatsAppNumber(value) {
+  return String(value || "").replace(/\D/g, "");
+}
+function validWhatsAppNumber(value) {
+  const digits = cleanWhatsAppNumber(value);
+  return digits.length >= 8 && digits.length <= 15;
+}
+function validPhoneNumber(value) {
+  const digits = String(value || "").replace(/\D/g, "");
+  return digits.length >= 8 && digits.length <= 15;
+}
+function openWhatsApp() {
+  if (!validWhatsAppNumber(WHATSAPP_NUMBER)) {
+    showStatus(CREATOR_ENQUIRY_MESSAGE + " WhatsApp ordering is not connected because no approved number has been configured.");
+    return;
+  }
+  const url = "https://wa.me/" + cleanWhatsAppNumber(WHATSAPP_NUMBER) + "?text=" + encodeURIComponent("Hello, I’m enquiring about the sample menu shown on this website concept. Could you share the confirmed menu and ordering details?");
+  window.open(url, "_blank", "noopener,noreferrer");
+}
+function callNumber() {
+  if (!validPhoneNumber(PHONE_NUMBER)) {
+    showStatus(CREATOR_ENQUIRY_MESSAGE + " Calling is not connected because no approved phone number has been configured.");
+    return;
+  }
+  window.location.href = "tel:" + String(PHONE_NUMBER).replace(/[^\d+]/g, "");
+}
+document.querySelectorAll("[data-whatsapp]").forEach(button => button.addEventListener("click", openWhatsApp));
+document.querySelectorAll("[data-call]").forEach(button => button.addEventListener("click", callNumber));
+document.querySelectorAll("[data-enquiry]").forEach(button => button.addEventListener("click", () => {
+  showStatus(CREATOR_ENQUIRY_MESSAGE + " No direct enquiry channel is connected; this button does not send a message.");
+  document.getElementById("contact").scrollIntoView({behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
+}));
+const navWrap = document.getElementById("navWrap");
+const menuToggle = document.getElementById("menuToggle");
+function closeMenu() {
+  navWrap.classList.remove("open");
+  menuToggle.setAttribute("aria-expanded", "false");
+  menuToggle.setAttribute("aria-label", "Open navigation menu");
+  menuToggle.textContent = "☰";
+}
+menuToggle.addEventListener("click", () => {
+  const isOpen = navWrap.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+  menuToggle.textContent = isOpen ? "×" : "☰";
+});
+document.querySelectorAll("#mainNav a").forEach(link => link.addEventListener("click", closeMenu));
+document.addEventListener("keydown", event => { if (event.key === "Escape") closeMenu(); });
+document.addEventListener("click", event => {
+  if (!navWrap.contains(event.target) && !menuToggle.contains(event.target)) closeMenu();
+});
+document.querySelectorAll(".image-wrap img").forEach(img => {
+  img.addEventListener("error", () => img.closest(".image-wrap").classList.add("image-failed"), {once:true});
+});
+</script>
+</body>
+</html>
